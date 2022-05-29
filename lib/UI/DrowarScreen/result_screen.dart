@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 import 'drawer/Drowar.dart';
 
-class GeneralScreen extends StatefulWidget {
+class ResultScreen extends StatefulWidget {
   @override
-  _GeneralScreenState createState() => _GeneralScreenState();
+  _ResultScreenState createState() => _ResultScreenState();
 }
 
-class _GeneralScreenState extends State<GeneralScreen> {
+class _ResultScreenState extends State<ResultScreen> {
   static final GlobalKey<ScaffoldState> scaffoldKey =
-      GlobalKey<ScaffoldState>();
+  GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -28,7 +28,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
       appBar: AppBar(
         centerTitle: true,
 
-        title: const Text('اخبار عامة'),
+        title: const Text('نتائج التوظيف '),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,

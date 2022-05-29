@@ -1,17 +1,20 @@
+
+
+
 import 'package:akbar/UI/BottombarScreens/HomePage/khabar_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'drawer/Drowar.dart';
 
-class GeneralScreen extends StatefulWidget {
+class MadaniaScreen extends StatefulWidget {
   @override
-  _GeneralScreenState createState() => _GeneralScreenState();
+  _MadaniaScreenState createState() => _MadaniaScreenState();
 }
 
-class _GeneralScreenState extends State<GeneralScreen> {
+class _MadaniaScreenState extends State<MadaniaScreen> {
   static final GlobalKey<ScaffoldState> scaffoldKey =
-      GlobalKey<ScaffoldState>();
+  GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
@@ -28,7 +31,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
       appBar: AppBar(
         centerTitle: true,
 
-        title: const Text('اخبار عامة'),
+        title: const Text('وظائف مدنية'),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,

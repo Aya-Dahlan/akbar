@@ -54,14 +54,40 @@ class _HomeScreenState extends State<HomeScreen> {
       //   // centerTitle: tr
       // ),
 
-      body: ListView.builder(
-        itemBuilder: (context, index) {
+      body: Stack(
+        children:[  ListView.builder(
+          itemBuilder: (context, index) {
 
-          return KhabarWidget(
-"تعلن جامعة شقراء دورات وبرامج تدريبية مجانية (عن بُعد) مع شهادة (حضور)",""
-          );
-        },
-        itemCount: 9,
+            return KhabarWidget(
+                "تعلن جامعة شقراء دورات وبرامج تدريبية مجانية (عن بُعد) مع شهادة (حضور)",""
+            );
+          },
+          itemCount: 9,
+        ),
+
+
+          PositionedDirectional(
+         //  top: 650,
+            child: Container(
+              width: double.infinity,
+              height: 80,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade300
+              ),
+              child: Row(
+                children: [
+                 
+                  Padding(
+                    padding: const EdgeInsets.only(right: 140),
+                    child: Text("اعلانات جوجل"),
+                  ),
+                  TextButton(onPressed: (){}, child:Icon(Icons.delete_forever,color: Colors.red,)),
+                ],
+              ),
+            ),
+          ),
+        ]
+
       ),
     );
   }

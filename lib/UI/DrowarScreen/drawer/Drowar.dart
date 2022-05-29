@@ -38,53 +38,58 @@ class _DrowarState extends State<Drowar> {
 }
 
 Widget MyDrawerList(BuildContext context, bool isLogin) {
-  return Container(
-    color: Colors.blueAccent,
-    padding: EdgeInsets.only(top: 15),
-    child: Column(
-      children: [
-        // menueItem(1, "الرسائل", (Icons.chat),
-        //     MainPage().currentPage == DrawerSections.massege ? true : false , ()=>
-        //   Navigator.pushNamed(context, '/messages')
-        //     //url_launcher
-        //   //launch("")
-        //    ),
-        SizedBox(
-          height: 10.w,
-        ),
-        menueItem(2, "اخبار عامة",
-            MainScreen().currentPage == DrawerSections.general ? true : false, ()=> GeneralScreen()),
-        SizedBox(
-          height: 10.w,
-        ),
-        menueItem(3, "وظائف مدنية",
-            MainScreen().currentPage == DrawerSections.about ? true : false, ()=>About()),
+  return SingleChildScrollView(
+    child: Container(
+      color: Colors.blueAccent,
+      padding: EdgeInsets.only(top: 15),
+      child: Column(
+        children: [
+          // menueItem(1, "الرسائل", (Icons.chat),
+          //     MainPage().currentPage == DrawerSections.massege ? true : false , ()=>
+          //   Navigator.pushNamed(context, '/messages')
+          //     //url_launcher
+          //   //launch("")
+          //    ),
 
-        SizedBox(
-          height: 10.w,
-        ),
-        menueItem(4, "وظاثف عسكرية",
-            MainScreen().currentPage == DrawerSections.who ? true : false, ()=>About()),
-        SizedBox(
-          height: 10.w,
-        ),
-        menueItem(5, "وظائف شركات",
-            MainScreen().currentPage == DrawerSections.contactUs ? true : false, ()=>About()),
-        SizedBox(
-          height: 10.w,
-        ),
-        if(isLogin) menueItem(6, "نتائج التوظيف",
-            MainScreen().currentPage == DrawerSections.logout ? true : false, ()=>About()),
+          menueItem(1, "اخبار عامة",
+              MainScreen().currentPage == DrawerSections.general ? true : false, ()=>  Navigator.pushNamed(context, '/GeneralScreen')),
+          SizedBox(
+            height: 5.w,
+          ),
+          menueItem(2, "وظائف مدنية",
+              MainScreen().currentPage == DrawerSections.about ? true : false,()=>Navigator.pushNamed(context, '/MadaniaScreen')),
 
-        SizedBox(
-          height: 30.h,
-        ),
+          SizedBox(
+            height: 5.w,
+          ),
+          menueItem(4, "وظاثف عسكرية",
+              MainScreen().currentPage == DrawerSections.who ? true : false, ()=>Navigator.pushNamed(context, '/AskarScreen')),
+          SizedBox(
+            height: 5.w,
+          ),
+          menueItem(5, "وظائف شركات",
+              MainScreen().currentPage == DrawerSections.contactUs ? true : false, ()=>Navigator.pushNamed(context, '/CompanyScreen')),
+          SizedBox(
+            height: 5.w,
+          ),
+           menueItem(6, "نتائج التوظيف",
+              MainScreen().currentPage == DrawerSections.logout ? true : false, ()=> Navigator.pushNamed(context, '/ResultScreen')),
 
-        Container(
-          color: Colors.blueAccent,
-          height: 30,
-        )
-      ],
+          SizedBox(
+            height: 5.h,
+          ),    menueItem(6, "الاعدادات ",
+              MainScreen().currentPage == DrawerSections.logout ? true : false, ()=>Navigator.pushNamed(context, '/SettingAbk')),
+
+          // SizedBox(
+          //   height: 5.h,
+          // ),
+
+          // Container(
+          //   color: Colors.blueAccent,
+          //   height: 30,
+          // )
+        ],
+      ),
     ),
   );
 }

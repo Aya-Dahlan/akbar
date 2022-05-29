@@ -20,7 +20,7 @@ class _MyHeaderDrawerState extends State<MyHeaderDrawer> {
       //color: Colors.white,
       // width: double.infinity,
       // height:260,
-     padding: EdgeInsets.only(top: 150.0,right: 10,bottom: 50),
+     padding: EdgeInsets.only(top: 150.0,right: 10,bottom: 20),
       child: !widget.isLogin ? Image.asset('assets/images/logo.png',color: Colors.white,height: 60,) : Column(
        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -84,7 +84,7 @@ class _WelcomeScreensState extends State<WelcomeScreens> {
           ),PageViewModel(
             title: " ",
             body:
-            "تصفح الوظائف الحكومية والمدنة والعسكريه",
+            "تصفح الوظائف الحكومية والمدنية والعسكريه",
             image: Image.asset('assets/images/logo.png'),
 
             decoration: pageDecoration,
